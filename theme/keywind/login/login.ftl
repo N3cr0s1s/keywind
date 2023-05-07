@@ -9,7 +9,6 @@
 <#import "features/labels/username.ftl" as usernameLabel>
 
 <#assign usernameLabel><@usernameLabel.kw /></#assign>
-
 <@layout.registrationLayout
   displayInfo=realm.password && realm.registrationAllowed && !registrationDisabled??
   displayMessage=!messagesPerField.existsError("username", "password")
@@ -63,7 +62,7 @@
             </#if>
           </div>
         </#if>
-        <@buttonGroup.kw>
+        <@buttonGroup.kw >
           <@button.kw color="primary" name="login" type="submit">
             ${msg("doLogIn")}
           </@button.kw>
